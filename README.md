@@ -12,6 +12,12 @@
 ./DailyHub
 ```
 
+## Q3 Explore Boston Tour
+
+```
+./ExploreBoston
+```
+
 ## **How to Use the Apps**
 
 1. Clone this repository:
@@ -64,3 +70,11 @@ git clone https://github.com/Spectual/CS501-hw5.git
 
     - Initial suggestion split each tab into its own nav graph, which caused duplicate stacks and lost state; I rewrote the setup to keep a single graph with explicit `from` args that drive animations and preserve the shared back stack.
 
+## 3. Explore Boston
+
+- **Task:** Build a four-stop city tour Compose app with Home → Categories → List → Detail flow, typed navigation arguments, and stack clearing when returning Home.
+- **Features:** Shared `Scaffold` with a reusable top app bar exposing back/home actions; sealed `TourRoute` helpers produce structured `navigate()` strings carrying both `String` and `Int` arguments; `TourData` seeds four categories and eight destinations that pass IDs through the stack.
+- **Stack Management:** The Home action calls `popUpTo("home") { inclusive = true }` to clear the stack, and a `BackHandler` flag disables back once the user lands on Home after a full tour. Re-entering the flow resets the flag so back works normally.
+- **AI Usage:**
+  - **How I used AI:** Asked ChatGPT to scaffold the navigation graph and compose layouts, then refined the sample Boston locations and UI details; also used it to validate `NavType` argument wiring.
+  - **Where AI misunderstood navigation:** Initial prompts suggested clearing the stack on every detail navigation and keeping the back button disabled permanently. I limited `popUpTo` to the Home action only and reset the back-blocking flag when the user restarts the tour.
