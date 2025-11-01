@@ -227,8 +227,7 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.headlineSmall
         )
         Text(
-            text = "Your recipes live in memory for this assignment. " +
-                "In a production app you might sync with a database.",
+            text = "Recipes live in memory for this assignment.",
             style = MaterialTheme.typography.bodyLarge
         )
     }
