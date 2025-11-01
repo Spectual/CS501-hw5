@@ -27,7 +27,7 @@ git clone https://github.com/Spectual/CS501-hw5.git
 ```
 
 1. Open the root folder in **Android Studio**.
-2. Each folder (Badge, Contacts, Login, Scaffold, SplitScreen, Dinner) is an independent Android project.
+2. Each folder  is an independent Android project.
 3. To run a specific app:
    - Open the folder in Android Studio as a separate project, or
    - Use **File > Open** and choose the app folder you want.
