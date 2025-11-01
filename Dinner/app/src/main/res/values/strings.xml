@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dinner</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_detail">Recipe</string>
+</resources>
